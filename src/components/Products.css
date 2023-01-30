@@ -1,0 +1,134 @@
+li {
+
+    padding: 2rem;
+    width: 350px;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+}
+
+img {
+    margin-bottom: 6px;
+    width: 100px;
+}
+
+h2 {
+    margin: 6px 0;
+    font-size: 15px;
+    font-weight: 600;
+    text-align: center;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 12px;
+    line-height: 1rem;
+    color: rgb(94, 94, 94);
+}
+
+.buy-now {
+    cursor: pointer;
+    font-size: 15px;
+    width: 100px;
+    height: 40px;
+    background-color: #377e80;
+    color: #ffffff;
+    border-radius: 7px;
+    margin-top: 2rem;
+}
+
+ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+
+.rating-button {
+    width: 50px;
+    height: 25px;
+    background-color: #0000ff;
+    border-radius: 5px;
+    color: #ffffff;
+    border: none;
+}
+
+.fa-regular {
+    color: #ffffff;
+}
+
+.container {
+    margin-top: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 800px;
+}
+
+.price-rating-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+span {
+    font-size: smaller;
+    padding-left: 0.5rem;
+}
+
+a {
+    text-decoration: none;
+    color: #000000;
+}
+
+.cart-cart {
+    display: none;
+}
+
+.update-icon {
+    display: flex;
+    justify-content: space-between;
+}
+
+.update-icon button{
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.delete-btn {
+    width: 100px;
+    height: 30px;
+    font-weight: 500;
+    background-color: #ff0000;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer
+}
+
+.update-btn {
+    width: 100px;
+    height: 30px;
+    font-weight: 500;
+    background-color: #023020;
+    border-radius: 5px;
+    border: none;
+    color: #ffffff;
+    cursor: pointer
+}
