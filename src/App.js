@@ -6,6 +6,7 @@ import Products from './components/Products';
 import Loader from './components/Loader';
 import CreateProduct from './components/CreateProduct';
 import Header from './components/Header';
+import UpdateProduct from './components/UpdateProduct';
 
 class App extends Component {
 
@@ -24,7 +25,7 @@ class App extends Component {
       errorMessage: "",
     }
 
-    this.URL = 'https://fakestoreapi.com/products/'
+    this.URL = 'https://fakestoreapi.com/products/';
   }
 
   fetchData = (url) => {
@@ -58,14 +59,53 @@ class App extends Component {
     });
     this.setState({
       products: newProducts,
+    });
+  }
+
+  handleClickUpdate = (title, description, price, category, id, rating, image) => {
+    let selectedProduct = this.state.products.find((product) => {
+      return id == product.id
+    });
+
+    let updateProduct = {};
+
+    if (title != "") {
+      updateProduct.title = title;
+    } else {
+      updateProduct.title = selectedProduct.title;
+    }
+
+    if (description != "") {
+      updateProduct.description = description;
+    } else {
+      updateProduct.description = selectedProduct.description;
+    }
+
+    if (price != "" && !isNaN(price)) {
+      updateProduct.price = price;
+    } else {
+      updateProduct.price = selectedProduct.price;
+    }
+
+    if (category != "") {
+      updateProduct.category = category;
+    } else {
+      updateProduct.category = selectedProduct.category;
+    }
+
+    updateProduct.rating = rating;
+    updateProduct.id = id;
+    updateProduct.image = image;
+
+    let updatedProducts = this.state.products;
+    updatedProducts.splice((id - 1), 1, updateProduct);
+
+    this.setState({
+      products: updatedProducts,
     })
-  }
 
-  handleClickUpdate = (event, product) => {
-    console.log(event);
-    console.log(product);
-  }
 
+  }
 
   handleClickCreate = (title, description, price, category, image) => {
     let newProduct = {};
@@ -77,7 +117,7 @@ class App extends Component {
     newProduct.id = this.state.products.length + 1;
     newProduct.rating = {
       rate: 0,
-      count: 0
+      count: 0,
     }
 
     let newProducts = this.state.products;
@@ -123,6 +163,11 @@ class App extends Component {
               <Route path="/new-product">
                 <CreateProduct handleClickCreate={this.handleClickCreate} />
               </Route>
+              <Route path="/product/:id" render={(routeProps) => {
+                return <UpdateProduct id={routeProps.match.params.id} product={this.state.products.find((product) => {
+                  return product.id == routeProps.match.params.id
+                })} handleClickUpdate={this.handleClickUpdate} />
+              }} />
             </Switch>
           </Router>
         }
