@@ -60,11 +60,11 @@ ul {
     color: #ffffff;
 }
 
-.container {
+.btn-sec {
     margin-top: 1rem;
-    width: 100%;
     display: flex;
     justify-content: space-between;
+    gap:2rem;
 }
 
 h3 {
