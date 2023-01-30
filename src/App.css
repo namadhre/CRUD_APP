@@ -136,7 +136,8 @@ table {
 
 /* Custome style */
 
-.fetch-fail, .no-data{
+.fetch-fail,
+.no-data {
   color: #ff0000;
   display: flex;
   justify-content: center;
@@ -150,3 +151,14 @@ table {
   font-size: 20px;
 }
 
+.drop-down {
+  color: grey;
+  font-size: medium;
+  background-color: #ffffff;
+  border-style: none;
+  border: 1px solid rgb(207, 204, 204);
+}
+
+.dropdown-container {
+  border: 1px solid green;
+}
