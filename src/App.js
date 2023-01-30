@@ -81,7 +81,7 @@ class App extends Component {
       updateProduct.description = selectedProduct.description;
     }
 
-    if (price != "" && !isNaN(price)) {
+    if (price != "" && Number(price)) {
       updateProduct.price = price;
     } else {
       updateProduct.price = selectedProduct.price;
