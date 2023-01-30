@@ -23,7 +23,7 @@ class Products extends Component {
                                 <span>{"(" + product.rating.count + ")"}</span>
                             </div>
                         </div>
-                        <div className="container">
+                        <div className="btn-sec">
                             <Link to={`/product/${product.id}`}>
                                 <button className="update-btn"> update<i className="fa-sharp fa-solid fa-pen-nib"></i>
                                 </button>
