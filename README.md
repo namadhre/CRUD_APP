@@ -1,3 +1,3 @@
 Deployed link
 
-https://crud-7owdnxe3z-mahendrachinthamgari.vercel.app/
+https://namadhre-crud-appe.vercel.app/
